@@ -1,0 +1,25 @@
+{
+  "name": "ergonomics-project",
+  "version": "1.0.0",
+  "description": "School project for \"Conception de services et ergonomie\" course",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kquemeneur/ergonomics-project.git"
+  },
+  "author": "Apolline Chenais, Paul Breton & Katell Quéméneur",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kquemeneur/ergonomics-project/issues"
+  },
+  "homepage": "https://github.com/kquemeneur/ergonomics-project#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemon": "^3.0.2"
+  }
+}
