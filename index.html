@@ -1,45 +1,75 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <meta name="description" content="La librairie du coin vous propose une sélection de livre autour de la psychologie sociale.">
-    <title>la librairie du coin</title>
+    <meta name="description"
+        content="La librairie du coin vous propose une sélection de livres sur des thèmes variés et pour tous.">
+    <!--CSS SHEETS-->
+    <link href="./style.css" rel="stylesheet">
+
+    <title>Accueil | la librairie du coin</title>
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <li><a title="lien vers la page d'accueil" href="index.html">Accueil</a></li>
-            <li><a title="lien vers la page de présentation de la librairie" href="#">La librairie</a></li>
-        </ul>
-    </nav>
-    <main>
-        <h1>La librairie du coin</h1>
+    <nav class="dark">
         <div>
-            <h2>La vie de Paul</h2>
-            <p>Description du super livre écrit par Paul Breton</p>
-            <p>prix : 29,99€</p>
-        </div>
-        <div>
-            <h2>IKEA, un monde</h2>
-            <p>Description du super livre écrit par l'autrice de tallent Katell Quémeneur</p>
-            <p>prix : 39,99€</p>
-        </div>
-        <div>
-            <h2>Sans idée</h2>
-            <p>Description du super livre écrit par Apolline Chenais</p>
-            <p>prix : 29,99€</p>
+            <ul>
+                <li><a title="lien vers la page d'accueil" href="index.html">Accueil</a></li>
+                <li><a title="lien vers la page d'informations pratiques de la librairie" href="infos.html">Contact</a></li>
+            </ul>
         </div>
 
-        <form name="newsletter">
-            <p>Inscrit toi à la newsletter !</p>
-            <label for="mail">Adresse mail</label>
-            <input id="mail" placeholder="exemple@mail.com" type="email">
-        </form>
+    </nav>
+    <main>
+        <section class="intro">
+            <h1>La librairie du coin</h1>
+            <p>Bienvenue dans l'univers de la librairie du coin.</p>
+            <p>Plongez au coeur des livres et découvrez notre sélection de livres pour petits et grands. </p>
+        </section>
+
+        <section class="card-container">
+            <div class="title">
+                <h2>Nouveautés du mois !</h2>
+                <p>La psychologie sociale à l'honneur</p>
+            </div>
+
+            <div class="card book-card dark">
+                <h3>La vie de Paul</h3>
+                <p>Description du super livre écrit par Paul Breton</p>
+                <p>prix : 29,99€</p>
+                <a href="#" title="lien vers la présentation du livre La vie de Paul" class="button"> En savoir +</a>
+            </div>
+            <div class="card book-card dark">
+                <h3>IKEA, un monde</h3>
+                <p>Description du super livre écrit par l'autrice de tallent Katell Quémeneur</p>
+                <p>prix : 39,99€</p>
+                <a href="#" title="lien vers la présentation du livre IKEA, un monde" class="button"> En savoir +</a>
+            </div>
+            <div class="card book-card dark">
+                <h3>Sans idée</h3>
+                <p>Description du super livre écrit par Apolline Chenais</p>
+                <p>prix : 29,99€</p>
+                <a href="#" title="lien vers la présentation du livre  Sans idée" class="button"> En savoir +</a>
+            </div>
+        </section>
+
+        <section class="form-container dark">
+            <form name="newsletter">
+                <h2>Restez informé</h2>
+                <p>Pour ne rien ratez inscrivez-vous à notre newsletter. Recever chaque mois notre sélection du moment
+                    et les dernières sorties.</p>
+                <label for="mail" class="form-label">Adresse mail</label>
+                <input id="mail" placeholder="exemple@mail.com" type="email" required class="form-control">
+                <button type="submit" class="button">S'inscrire</button>
+            </form>
+        </section>
     </main>
-    <footer>
-        <p>&copy; Paul Breton, Apolline Chenais et Katell Quémeneur | IAI3 | janver 2024</p>
+    <footer class="dark">
         <a title="lien vers le plan du site" href="plan_site.html">Plan du site</a>
+        <p>&copy; Paul Breton, Apolline Chenais et Katell Quémeneur, tous droits réservés | IAI3 | janvier 2024</p>
     </footer>
 </body>
+
 </html>
