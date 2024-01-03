@@ -259,6 +259,15 @@ nav a:hover {
 .contact section {
     width: 50%;
 }
+/**** EQUIPE ****/
+.equipier span{
+    font-weight: bold;
+}
+
+.equipier::before{
+    content:"";
+    border:2px solid red;
+}
 
 /**** BOOKS ****/
 .book {
@@ -304,7 +313,7 @@ nav a:hover {
 /* mobile */
 @media (max-width: 600px) {
     .card {
-        min-width: 350px;
+        min-width: 320px;
         margin-bottom: 2%;
     }
 
@@ -327,5 +336,9 @@ nav a:hover {
 
     .form-container form input {
         margin-bottom: 2%;
+    }
+
+    .contact section {
+        width: 100%;
     }
 }
