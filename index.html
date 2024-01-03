@@ -9,20 +9,38 @@
     <!--CSS SHEETS-->
     <link href="./style.css" rel="stylesheet">
 
-    <title>Accueil | la librairie du coin</title>
+    <title>La librairie du coin</title>
 </head>
 
 <body>
-    <nav class="dark">
-        <div>
-            <ul>
-                <li><a title="lien vers la page d'accueil" href="index.html">Accueil</a></li>
-                <li><a title="lien vers la page d'informations pratiques de la librairie" href="infos.html">Contact</a>
-                </li>
-            </ul>
+    <header>
+        <!--menu d'évidement-->
+        <div class="fr-skiplinks">
+            <nav class="fr-container" role="navigation" aria-label="Accès rapide">
+                <ul class="fr-skiplinks__list">
+                    <li> <a class="fr-link" href="#contenu">Contenu</a> </li>
+                    <li> <a class="fr-link" href="#header-navigation">Menu</a> </li>
+                    <li> <a class="fr-link" href="#footer">Pied de page</a> </li>
+                </ul>
+            </nav>
         </div>
-    </nav>
-    <main>
+        <!--menu principal-->
+        <nav class="dark" role="navigation" aria-label="menu du site" id="header-navigation">
+            <div>
+                <ul>
+                    <li><a title="lien vers la page d'accueil" href="index.html" aria-current="page">Accueil</a></li>
+                    <li><a title="lien vers la page d'informations pratiques de la librairie"
+                            href="infos.html">Contact</a>
+                            <li><a title="lien vers la page de présentation de l'équipe"
+                                href="equipe.html">L'équipe</a>
+                        </li>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main id="contenu">
         <section class="intro">
             <div>
                 <h1>La librairie du coin</h1>
@@ -31,7 +49,7 @@
             </div>
         </section>
 
-        <section class="card-container">
+        <section class="card-container newBook-container">
             <div class="title">
                 <h2>Nouveautés du mois !</h2>
                 <p>La psychologie sociale à l'honneur</p>
@@ -41,19 +59,22 @@
                 <h3>La vie de Paul</h3>
                 <p>Description du super livre écrit par Paul Breton</p>
                 <p>prix : 29,99€</p>
-                <a href="template_desc.html" title="lien vers la présentation du livre La vie de Paul" class="button"> En savoir +</a>
+                <a href="template_desc.html" title="lien vers la présentation du livre La vie de Paul" class="button">
+                    Découvrir</a>
             </div>
             <div class="card book-card dark">
                 <h3>IKEA, un monde</h3>
                 <p>Description du super livre écrit par l'autrice de tallent Katell Quémeneur</p>
                 <p>prix : 39,99€</p>
-                <a href="template_desc.html" title="lien vers la présentation du livre IKEA, un monde" class="button"> En savoir +</a>
+                <a href="template_desc.html" title="lien vers la présentation du livre IKEA, un monde" class="button">
+                    Découvrir</a>
             </div>
             <div class="card book-card dark">
                 <h3>Sans idée</h3>
                 <p>Description du super livre écrit par Apolline Chenais</p>
                 <p>prix : 29,99€</p>
-                <a href="template_desc.html" title="lien vers la présentation du livre  Sans idée" class="button"> En savoir +</a>
+                <a href="template_desc.html" title="lien vers la présentation du livre  Sans idée" class="button">
+                    Découvrir</a>
             </div>
         </section>
 
@@ -62,8 +83,12 @@
                 <h2>Restez informé</h2>
                 <p>Pour ne rien ratez inscrivez-vous à notre newsletter. Recever chaque mois notre sélection du moment
                     et les dernières sorties.</p>
-                <label for="mail" class="form-label">Adresse mail</label>
-                <input id="mail" placeholder="exemple@mail.com" type="email" required class="form-control">
+                <label for="mail" class="form-label">Adresse mail * </label>
+                <input name="mail" id="mail" placeholder="exemple@mail.com" type="email" aria-label="adresse e-mail"
+                    required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                    title="l'adresse doit contenir un @ et doit finir par une extension de domaine (exemple '.com')"
+                    autocomplete="email" class="form-control">
+
                 <button type="submit" class="button">S'inscrire</button>
             </form>
         </section>
@@ -74,9 +99,32 @@
             </div>
         </section>
     </main>
-    <footer class="dark">
+    <footer class="dark" id="footer">
         <a title="lien vers le plan du site" href="plan_site.html">Plan du site</a>
+        <a title="lien vers les mentions légales" href="mention_legale.html">Mentions légales</a>
         <p>&copy; Paul Breton, Apolline Chenais et Katell Quémeneur, tous droits réservés | IAI3 | janvier 2024</p>
+        <div>
+            <a title="lien vers le compte instagram - nouvelle fenêtre" href="https://instagram.com" target="_blank">
+                <svg fill="#FFFFFF" viewBox="0 0 32 32" id="insta">
+                    <path
+                        d="M22.3,8.4c-0.8,0-1.4,0.6-1.4,1.4c0,0.8,0.6,1.4,1.4,1.4c0.8,0,1.4-0.6,1.4-1.4C23.7,9,23.1,8.4,22.3,8.4z">
+                    </path>
+                    <path
+                        d="M16,10.2c-3.3,0-5.9,2.7-5.9,5.9s2.7,5.9,5.9,5.9s5.9-2.7,5.9-5.9S19.3,10.2,16,10.2z M16,19.9c-2.1,0-3.8-1.7-3.8-3.8 c0-2.1,1.7-3.8,3.8-3.8c2.1,0,3.8,1.7,3.8,3.8C19.8,18.2,18.1,19.9,16,19.9z">
+                    </path>
+                    <path
+                        d="M20.8,4h-9.5C7.2,4,4,7.2,4,11.2v9.5c0,4,3.2,7.2,7.2,7.2h9.5c4,0,7.2-3.2,7.2-7.2v-9.5C28,7.2,24.8,4,20.8,4z M25.7,20.8 c0,2.7-2.2,5-5,5h-9.5c-2.7,0-5-2.2-5-5v-9.5c0-2.7,2.2-5,5-5h9.5c2.7,0,5,2.2,5,5V20.8z">
+                    </path>
+                </svg>
+            </a>
+            <a title="lien vers le compte facebook - nouvelle fenêtre" href="https://facebook.com" target="_blank">
+                <svg fill="#FFFFFF" viewBox="0 0 32 32" id="facebook">
+                    <path
+                        d="M12.6,16.1v11.6c0,0.2,0.1,0.3,0.3,0.3h4.6c0.2,0,0.3-0.1,0.3-0.3V15.9h3.4c0.2,0,0.3-0.1,0.3-0.3l0.3-3.6 c0-0.2-0.1-0.3-0.3-0.3h-3.7V9.2c0-0.6,0.5-1.1,1.2-1.1h2.6C21.9,8.1,22,8,22,7.8V4.3C22,4.1,21.9,4,21.7,4h-4.4 c-2.6,0-4.7,1.9-4.7,4.3v3.4h-2.3c-0.2,0-0.3,0.1-0.3,0.3v3.6c0,0.2,0.1,0.3,0.3,0.3h2.3V16.1z">
+                    </path>
+                </svg>
+            </a>
+        </div>
     </footer>
 </body>
 

@@ -3,19 +3,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
 :root {
-    --dark: #5A2429ff;
+    --dark: #5A2429;
     --light: white;
-    --secondary: #AC716Cff;
+    --secondary: #AC716C;
     --radius: 8px;
     --small-height: 30px;
     --title-font: 'Bad Script', cursive;
+    --text-font: 'Montserrat', sans-serif;
 
     --old-rose: #AC716Cff;
 
     --licorice: #130B0Cff;
     --licorice-2: #150F0Fff;
-    --ecru: #C7A463ff;
-    --chocolate-cosmos: #5A2429ff;
+    --ecru: #C7A463;
+    --chocolate-cosmos: #5a2429;
     --night: #151519ff;
 }
 
@@ -25,7 +26,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: var(--text-font);
 }
 
 h1,
@@ -70,6 +71,11 @@ footer a{
     font-size: small;
 }
 
+footer svg{
+    width:25px;
+    height:25px;
+}
+
 .dark {
     background-color: var(--dark);
     color: white;
@@ -97,7 +103,25 @@ footer a{
     min-height: var(--small-height);
 }
 
-/**** NAV ****/
+/**** NAVIGATION ****/
+/**** MENU D'EVITEMENT ****/
+.fr-skiplinks {
+  position: absolute;
+  left: -100%; 
+  top: auto;
+ 
+}
+
+.fr-skiplinks:focus-within {
+    position: relative;
+    left: 0; 
+}
+
+.fr-skiplinks:focus-within a {
+    color:var(--dark);
+}
+
+/*** MENU PRINCIPAL ****/
 nav ul {
     display: flex;
     list-style: none;
@@ -116,7 +140,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
 }
-
+nav .active, nav a:hover{
+    color:var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+}
 /**** Intro ****/
 .intro {
     height: 70vh;
@@ -153,6 +180,7 @@ nav ul li a {
     padding-left: 12%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     position: relative;
 }
 
@@ -176,11 +204,17 @@ nav ul li a {
     width: 100vw;
 }
 
+.newBook-container{
+    border-width : 15px 0;
+    border-color: var(--dark);
+    border-style: solid;
+    box-sizing: border-box;
+    padding : 2% 0;
+}
 /**** Newsletter form ****/
 .form-container {
-    margin: 2% 0;
     padding: 1%;
-    background-image: url(medias/6920933.jpg);
+    background-image: url(medias/newsletter.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom right;
@@ -233,6 +267,11 @@ nav ul li a {
 
 .book div{
     margin : 1%;
+}
+
+.book h2{
+    font-family: var(--text-font);
+    font-weight: bold;
 }
 
 .book div:first-child{
