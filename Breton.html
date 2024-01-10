@@ -9,7 +9,7 @@
     <!--CSS SHEETS-->
     <link href="./style.css" rel="stylesheet">
 
-    <title>La librairie du coin</title>
+    <title>LIVRE | La librairie du coin</title>
 </head>
 
 <body>
@@ -37,65 +37,38 @@
             </div>
         </nav>
     </header>
-
-    <main id="contenu" role="main">
-        <section class="intro">
+    <main id="contenu" class="book" role="main">
+        <div>
+            <h1>L'arc en ciel de l'accessibilité</h1>
+            <p>Paul Breton</p>
+            <div class="book-info">
+                <p>12 janvier 2023</p>
+                <p>Sciences humaines & sociales | Psycho-sociale | Adulte</p>
+            </div>
             <div>
-                <h1>La librairie du coin</h1>
-                <p>Bienvenue dans l'univers de la librairie du coin.</p>
-                <p>Plongez au coeur des livres et découvrez notre sélection de livres pour petits et grands. </p>
+                <h3>À propos</h3>
+                <p>Résumé</p>
+                <a class="button dark" href="BRETON_Paul_IAI3.pdf" title="ouverture de l'extrait dans une nouvelle fenêtre">voir un extrait</a>
             </div>
-        </section>
+        </div>
 
-        <section class="card-container newBook-container">
-            <div class="title">
-                <h2>Nouveautés du mois !</h2>
-                <p>La psychologie sociale à l'honneur</p>
-            </div>
+        <div>
+            <h3>Informations pratiques</h3>
+            <p>Prix : 29,99€</p>
+            <p>Disponibilité : En stock</p>
+            <p><i>Reservation possible par téléphone ou mail</i></p>
+            
+            <h3>Détails du produit</h3>
+            <ul>
+                <li>Auteur : Paul Breton</li>
+                <li>Editeur : Trégor Editions</li>
+                <li>Date de parution : 12/01/2024</li>
+                <li>EAN : 978-2-1234-2024-0</li>
+                <li>Nombre de pages : 210 pages</li>
+                <li>Format : grand format</li>
+            </ul>
+        </div>
 
-            <div class="card book-card dark">
-                <h3>La vie de Paul</h3>
-                <p>Description du super livre écrit par Paul Breton</p>
-                <p>prix : 29,99€</p>
-                <a href="Breton.html" title="lien vers la présentation du livre La vie de Paul" class="button">
-                    Découvrir</a>
-            </div>
-            <div class="card book-card dark">
-                <h3>IKEA, un monde</h3>
-                <p>Description du super livre écrit par l'autrice de tallent Katell Quémeneur</p>
-                <p>prix : 39,99€</p>
-                <a href="Quemeneur.html" title="lien vers la présentation du livre IKEA, un monde" class="button">
-                    Découvrir</a>
-            </div>
-            <div class="card book-card dark">
-                <h3>Sans idée</h3>
-                <p>Description du super livre écrit par Apolline Chenais</p>
-                <p>prix : 29,99€</p>
-                <a href="Chenais.html" title="lien vers la présentation du livre  Sans idée" class="button">
-                    Découvrir</a>
-            </div>
-        </section>
-
-        <section class="form-container dark">
-            <form name="newsletter">
-                <h2>Restez informé</h2>
-                <p>Pour ne rien rater inscrivez-vous à notre newsletter. Recever chaque mois notre sélection du moment
-                    et les dernières sorties.</p>
-                <label for="mail" class="form-label">Adresse mail * </label>
-                <input name="mail" id="mail" placeholder="exemple@mail.com" type="email" aria-label="adresse e-mail"
-                    required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                    title="l'adresse doit contenir un @ et doit finir par une extension de domaine (exemple '.com')"
-                    autocomplete="email" class="form-control">
-
-                <button type="submit" class="button">S'inscrire</button>
-            </form>
-        </section>
-        <section>
-            <div class="title">
-                <h2>Dédicaces du mois</h2>
-                <p></p>
-            </div>
-        </section>
     </main>
     <footer class="dark" id="footer" role="contentinfo">
         <a title="lien vers le plan du site" href="plan_site.html">Plan du site</a>

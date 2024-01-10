@@ -1,25 +1,17 @@
 /**** GLOBAL ****/
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Oxanium:wght@200..800&display=swap');
 
 :root {
     --dark: #5A2429;
     --light: white;
-    --secondary: #AC716C;
+    --secondary: #C5918C;
     --radius: 8px;
     --small-height: 30px;
-    --title-font: 'Bad Script', cursive;
+    --title-font: "Oxanium", sans-serif;
     --text-font: 'Montserrat', sans-serif;
-
-    --old-rose: #AC716Cff;
-
-    --licorice: #130B0Cff;
-    --licorice-2: #150F0Fff;
-    --ecru: #C7A463;
-    --chocolate-cosmos: #5a2429;
-    --night: #151519ff;
 }
-
+/*#AC716C  #C5918C*/
 body {
     background-color: var(--light);
     position: relative;
@@ -27,6 +19,14 @@ body {
     padding: 0;
     margin: 0;
     font-family: var(--text-font);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+main{
+    min-height: calc(100vh - 16vh);
 }
 
 h1,
@@ -38,9 +38,17 @@ h3 {
 h1,
 h2 {
     font-family: var(--title-font);
-    font-weight: 400;
+    font-weight: 800;
+    color:var(--dark);
 }
 
+h1{
+    font-size: 3em;
+}
+
+h2{
+    font-size: 2em;
+}
 button,
 a {
     padding: 0;
@@ -79,11 +87,11 @@ footer svg {
 
 .dark {
     background-color: var(--dark);
-    color: white;
+    color: var(--light);
 }
 
 .dark a {
-    color: white;
+    color: var(--light);
 }
 
 .light {
@@ -104,6 +112,18 @@ footer svg {
     min-height: var(--small-height);
 }
 
+.button:hover, .button:focus{
+    background-color:var(--secondary);
+    border-bottom: 0px;
+}
+
+a:hover{
+    color: var(--secondary);
+}
+
+ a:hover svg{
+    fill: var(--secondary);
+}
 /**** NAVIGATION ****/
 /**** MENU D'EVITEMENT ****/
 .fr-skiplinks {
@@ -142,25 +162,23 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav .active,
 nav a:hover {
-    color: var(--secondary);
     border-bottom: 2px solid var(--secondary);
 }
 
 /**** Intro ****/
 .intro {
-    height: 70vh;
-    background-image: url(medias/livre-ouvert-scene-conte-fees.jpg);
+    height: 80vh;
+    background-image: url(medias/accueil.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom right;
-
-
+    padding: 3%;
 }
 
 .intro h1 {
     padding: 0;
+    font-size: 5em;
 }
 
 .card {
@@ -208,7 +226,8 @@ nav a:hover {
 
 .newBook-container {
     border-width: 15px 0;
-    border-color: var(--dark);
+    border-image: linear-gradient(to right, var(--dark), #EA394B, #BA5745); 
+    border-image-slice: 1;
     border-style: solid;
     box-sizing: border-box;
     padding: 2% 0;
@@ -221,6 +240,10 @@ nav a:hover {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom right;
+}
+
+.form-container h2{
+    color:var(--light);
 }
 
 .form-container form {
@@ -249,17 +272,20 @@ nav a:hover {
 .contact {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 2%;
 }
 
 .contact h1 {
     width: 100%;
-    text-align: center;
 }
 
 .contact section {
     width: 50%;
 }
 /**** EQUIPE ****/
+.equipe{
+    padding : 0 2%;
+}
 .equipier span{
     font-weight: bold;
 }
@@ -273,8 +299,9 @@ nav a:hover {
 .book {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
-    min-height: (calc(100vh - 8vh));
+    justify-content: flex-start;
+    width: calc(80vw - 3%);
+    margin-left: calc(20vw + 3%);
 }
 
 .book div {
@@ -295,18 +322,23 @@ nav a:hover {
 
 .book div:first-child::before {
     content: "";
+    background-image: url(./book.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
     position: absolute;
     top: calc(8vh + 2%);
     left: 2%;
     width: 20vw;
-    height: 100%;
-    border: 2px solid red;
+    height :calc(80vh);
 }
 
-.book div:first-child p {
+.book-info {
     font-size: small;
 }
 
+.book .button:hover{
+    color:var(--dark);
+}
 
 
 /************* RESPONSIVE   ***************/
@@ -340,5 +372,32 @@ nav a:hover {
 
     .contact section {
         width: 100%;
+    }
+
+   
+}
+
+@media (max-width: 710px) {
+    .book{
+        margin : 0;
+        width : 100vw;
+        justify-content: center;
+        align-content: space-evenly;
+        
+    }
+    .book div{
+        margin : 0;
+    }
+    .book div:first-child {
+        border:none;
+        padding-top:41vh;
+    }
+
+    .book div:first-child::before{
+        top: calc(8vh + 1%);
+        left: 10%;
+        width: 80vw;
+        height: 40vh;
+        background-position: center;
     }
 }
