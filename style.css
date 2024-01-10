@@ -124,6 +124,10 @@ a:hover{
  a:hover svg{
     fill: var(--secondary);
 }
+
+.italique{
+    font-style: italic;
+}
 /**** NAVIGATION ****/
 /**** MENU D'EVITEMENT ****/
 .fr-skiplinks {
@@ -168,7 +172,7 @@ nav a:hover {
 
 /**** Intro ****/
 .intro {
-    height: 80vh;
+    min-height: 80vh;
     background-image: url(medias/accueil.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -196,6 +200,11 @@ nav a:hover {
     text-align: center;
 }
 
+.card-light {
+    background-color: var(--light);
+    border-radius: var(--radius);
+    border : 2px solid var(--dark);
+}
 /**** Books list ****/
 
 .book-card {
@@ -267,6 +276,14 @@ nav a:hover {
 .form-container .button {
     margin-right: 10%;
 }
+/**** avis ****/
+.avis{
+    padding : 1% 2%;
+}
+
+.avis h2{
+    text-align: center;
+}
 
 /**** INFOS ****/
 .contact {
@@ -318,6 +335,7 @@ nav a:hover {
     border-top: 0px;
     border-bottom: 0px;
     padding: 0 1%;
+    max-width:50%;
 }
 
 .book div:first-child::before {
