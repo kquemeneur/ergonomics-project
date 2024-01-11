@@ -360,7 +360,7 @@ nav a:hover {
 
 /**** BOOKS ****/
 .Chenais::before{
-    background-image: url(./medias/Chenais.png);
+    background-image: url(./medias/Chenais.jpg);
 }
 .Breton::before{
     background-image: url(./medias/Breton.jpg);
