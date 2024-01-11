@@ -11,6 +11,7 @@
     --title-font: "Oxanium", sans-serif;
     --text-font: 'Montserrat', sans-serif;
 }
+
 /*#AC716C  #C5918C*/
 body {
     background-color: var(--light);
@@ -25,7 +26,7 @@ body {
     justify-content: space-between;
 }
 
-main{
+main {
     min-height: calc(100vh - 16vh);
 }
 
@@ -39,16 +40,17 @@ h1,
 h2 {
     font-family: var(--title-font);
     font-weight: 800;
-    color:var(--dark);
+    color: var(--dark);
 }
 
-h1{
+h1 {
     font-size: 3em;
 }
 
-h2{
+h2 {
     font-size: 2em;
 }
+
 button,
 a {
     padding: 0;
@@ -112,22 +114,24 @@ footer svg {
     min-height: var(--small-height);
 }
 
-.button:hover, .button:focus{
-    background-color:var(--secondary);
+.button:hover,
+.button:focus {
+    background-color: var(--secondary);
     border-bottom: 0px;
 }
 
-a:hover{
+a:hover {
     color: var(--secondary);
 }
 
- a:hover svg{
+a:hover svg {
     fill: var(--secondary);
 }
 
-.italique{
+.italique {
     font-style: italic;
 }
+
 /**** NAVIGATION ****/
 /**** MENU D'EVITEMENT ****/
 .fr-skiplinks {
@@ -203,8 +207,9 @@ nav a:hover {
 .card-light {
     background-color: var(--light);
     border-radius: var(--radius);
-    border : 2px solid var(--dark);
+    border: 2px solid var(--dark);
 }
+
 /**** Books list ****/
 
 .book-card {
@@ -235,7 +240,7 @@ nav a:hover {
 
 .newBook-container {
     border-width: 15px 0;
-    border-image: linear-gradient(to right, var(--dark), #EA394B, #BA5745); 
+    border-image: linear-gradient(to right, var(--dark), #EA394B, #BA5745);
     border-image-slice: 1;
     border-style: solid;
     box-sizing: border-box;
@@ -251,8 +256,8 @@ nav a:hover {
     background-position: bottom right;
 }
 
-.form-container h2{
-    color:var(--light);
+.form-container h2 {
+    color: var(--light);
 }
 
 .form-container form {
@@ -276,12 +281,13 @@ nav a:hover {
 .form-container .button {
     margin-right: 10%;
 }
+
 /**** avis ****/
-.avis{
-    padding : 1% 2%;
+.avis {
+    padding: 1% 2%;
 }
 
-.avis h2{
+.avis h2 {
     text-align: center;
 }
 
@@ -290,26 +296,66 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     padding: 0 2%;
+    align-content: flex-start;
+    position:relative;
 }
 
 .contact h1 {
     width: 100%;
+    margin-bottom: 2%;
 }
 
 .contact section {
     width: 50%;
 }
-/**** EQUIPE ****/
-.equipe{
-    padding : 0 2%;
+
+.contact span {
+    font-weight: 600;
 }
-.equipier span{
+.contact::after{
+    content:"";
+    display: block;
+    width: 100%;
+    height: 40vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-image: url(./medias/contact.png);
+    position:absolute;
+    bottom:0;
+    right:0;
+    z-index: -100;
+}
+
+/**** EQUIPE ****/
+.equipe {
+    padding: 0 2%;
+}
+
+.equipier span {
     font-weight: bold;
 }
 
-.equipier::before{
+.equipier::before {
     content:"";
-    border:2px solid red;
+    display: block;
+    width: 25vw;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#Paul::before {
+    background-image: url(./medias/Paul.png);
+}
+
+#Apolline::before {
+    background-image: url(./medias/Apolline.png);
+}
+
+#Katell::before {
+    background-image: url(./medias/Katell.png);
 }
 
 /**** BOOKS ****/
@@ -335,7 +381,7 @@ nav a:hover {
     border-top: 0px;
     border-bottom: 0px;
     padding: 0 1%;
-    max-width:50%;
+    max-width: 50%;
 }
 
 .book div:first-child::before {
@@ -347,15 +393,15 @@ nav a:hover {
     top: calc(8vh + 2%);
     left: 2%;
     width: 20vw;
-    height :calc(80vh);
+    height: calc(80vh);
 }
 
 .book-info {
     font-size: small;
 }
 
-.book .button:hover{
-    color:var(--dark);
+.book .button:hover {
+    color: var(--dark);
 }
 
 
@@ -391,31 +437,45 @@ nav a:hover {
     .contact section {
         width: 100%;
     }
+    .contact::after{
+        background-image: none;
+    }
 
-   
+
 }
 
 @media (max-width: 710px) {
-    .book{
-        margin : 0;
-        width : 100vw;
+    .book {
+        margin: 0;
+        width: 100vw;
         justify-content: center;
         align-content: space-evenly;
-        
-    }
-    .book div{
-        margin : 0;
-    }
-    .book div:first-child {
-        border:none;
-        padding-top:41vh;
+
     }
 
-    .book div:first-child::before{
+    .book div {
+        margin: 0;
+    }
+
+    .book div:first-child {
+        border: none;
+        padding-top: 41vh;
+    }
+
+    .book div:first-child::before {
         top: calc(8vh + 1%);
         left: 10%;
         width: 80vw;
         height: 40vh;
         background-position: center;
     }
+
+    .equipier::before {
+        width: 100%;
+        height: 25vh;
+    }
+    .contact::after{
+        height: 35vh;
+    }
+    
 }
