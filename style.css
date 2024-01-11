@@ -359,6 +359,16 @@ nav a:hover {
 }
 
 /**** BOOKS ****/
+.Chenais::before{
+    background-image: url(./medias/Chenais.png);
+}
+.Breton::before{
+    background-image: url(./medias/Breton.png);
+}
+.Quemeneur::before{
+    background-image: url(./medias/Quemeneur.png);
+}
+
 .book {
     display: flex;
     flex-wrap: wrap;
@@ -386,7 +396,6 @@ nav a:hover {
 
 .book div:first-child::before {
     content: "";
-    background-image: url(./book.jpg);
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
