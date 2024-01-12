@@ -77,16 +77,17 @@
         </section>
 
         <section class="form-container dark">
+            <h2>Restez informés</h2>
+            <p>Pour ne rien rater inscrivez-vous à notre newsletter. Recevez chaque mois notre sélection du moment
+                et les dernières sorties.</p>
             <form name="newsletter">
-                <h2>Restez informés</h2>
-                <p>Pour ne rien rater inscrivez-vous à notre newsletter. Recevez chaque mois notre sélection du moment
-                    et les dernières sorties.</p>
-                <label for="mail" class="form-label">Adresse mail * </label>
-                <input name="mail" id="mail" placeholder="exemple@mail.com" type="email" aria-label="adresse e-mail"
-                    required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
-                    title="l'adresse doit contenir un @ et doit finir par une extension de domaine (exemple '.com')"
-                    autocomplete="email" class="form-control">
-
+                <div class="formgroup-input">
+                    <label for="mail" class="form-label">Adresse mail * </label>
+                    <input name="mail" id="mail" placeholder="exemple@mail.com" type="email" aria-label="adresse e-mail"
+                        required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+                        title="l'adresse doit contenir un @ et doit finir par une extension de domaine (exemple '.com')"
+                        autocomplete="email" class="form-control">
+                </div>
                 <button type="submit" class="button">S'inscrire</button>
             </form>
         </section>
