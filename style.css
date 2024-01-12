@@ -76,6 +76,7 @@ footer {
     background-color: var(--dark);
     box-sizing: border-box;
     font-size: small;
+    min-height: 5vh;
 }
 
 footer a {
@@ -176,12 +177,12 @@ nav a:hover {
 
 /**** Intro ****/
 .intro {
-    min-height: 80vh;
+    min-height: 42vh;
     background-image: url(medias/accueil.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom right;
-    padding: 3%;
+    padding: 20px;
 }
 
 .intro h1 {
@@ -191,7 +192,7 @@ nav a:hover {
 
 .card {
     border-radius: var(--radius);
-    padding: 1% 2%;
+    padding: 20px;
     box-sizing: border-box;
     margin: 0;
     width: 30vw;
@@ -202,6 +203,12 @@ nav a:hover {
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
+    align-content: center;
+}
+
+.card-container .title{
+    margin-bottom:20px;
+    width: 100%;
 }
 
 .card-light {
@@ -218,24 +225,24 @@ nav a:hover {
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    width: 100%;
+    max-width: 30%;
 }
 
 .book-card::before {
     content: "";
     background-image: url(book.jpg);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: left center;
+    background-position: center;
     width: 35%;
-    height: calc(100% - 4%);
+    height: 100%;
     box-sizing: border-box;
     position: absolute;
-    top: 1%;
-    left: 2%;
-}
-
-.card-container .title {
-    width: 100vw;
+    top: 0;
+    left: 0;
+    border-radius: var(--radius) 0px 0px var(--radius);
+    border: var(--dark) 5px solid;
 }
 
 .newBook-container {
@@ -244,16 +251,18 @@ nav a:hover {
     border-image-slice: 1;
     border-style: solid;
     box-sizing: border-box;
-    padding: 2% 0;
+    padding: 20px;
+    min-height: 50vh;
 }
 
 /**** Newsletter form ****/
 .form-container {
-    padding: 1%;
+    padding: 20px;
     background-image: url(medias/newsletter.png);
-    background-size: contain;
+    background-size: auto 60%;
     background-repeat: no-repeat;
     background-position: bottom right;
+    min-height: 35vh;
 }
 
 .form-container h2 {
@@ -261,18 +270,23 @@ nav a:hover {
 }
 
 .form-container form {
+    margin-top:30px;
     box-sizing: border-box;
-    width: 60vw;
+    width: 70vw;
+    max-width: 500px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    justify-content: flex-start;
+    background-color: rgba(0,0,0,0.3);
+    padding:20px 30px;
+    border-radius: var(--radius);
 }
 .formgroup-input {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 50%;
+    align-items: flex-start;
+    width: 100%;
 }
 .form-container input {
     background-color: var(--light);
@@ -280,20 +294,28 @@ nav a:hover {
     border-radius: var(--radius);
     height: var(--small-height);
     width: 100%;
-    margin-top:10px;
+    margin-top:20px;
     font-size: medium;
 }
 
-.form-container .button {
-    margin-left: 10%;
+.form-container .button{
+    align-self: flex-end;
+    margin-left: 0;
+    margin-top:20px;
 }
+
 
 /**** avis ****/
 .avis {
-    padding: 1% 2%;
+    padding: 20px;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .avis h2 {
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -301,7 +323,7 @@ nav a:hover {
 .contact {
     display: flex;
     flex-wrap: wrap;
-    padding: 0 2%;
+    padding: 20px;
     align-content: flex-start;
     position:relative;
 }
@@ -333,9 +355,21 @@ nav a:hover {
     z-index: -100;
 }
 
+.plan-site{
+    padding: 20px;
+}
+
+.terms-of-use{
+    padding: 20px;
+}
+
 /**** EQUIPE ****/
 .equipe {
-    padding: 0 2%;
+    padding: 20px;
+}
+
+.equipier{
+    padding: 20px;
 }
 
 .equipier span {
@@ -345,11 +379,12 @@ nav a:hover {
 .equipier::before {
     content:"";
     display: block;
-    width: 25vw;
-    height: 300px;
-    background-size: contain;
+    width: 100%;
+    min-height: 370px;
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 0 20%;
+    border-radius: var(--radius);
 }
 
 #Paul::before {
@@ -377,14 +412,13 @@ nav a:hover {
 
 .book {
     display: flex;
-    flex-wrap: wrap;
     justify-content: flex-start;
-    width: calc(80vw - 3%);
-    margin-left: calc(20vw + 3%);
+    min-height: 87vh;
+    padding-left: calc(20vw + 3%);
 }
 
-.book div {
-    margin: 1%;
+.book>div {
+    padding: 20px;
 }
 
 .book h2 {
@@ -396,7 +430,6 @@ nav a:hover {
     border: 1px solid var(--secondary);
     border-top: 0px;
     border-bottom: 0px;
-    padding: 0 1%;
     max-width: 50%;
 }
 
@@ -405,9 +438,9 @@ nav a:hover {
     background-size: contain;
     background-repeat: no-repeat;
     position: absolute;
-    top: calc(8vh + 2%);
-    left: 2%;
+    left: 20px;
     width: 20vw;
+    max-width: 350px;
     height: calc(80vh);
 }
 
@@ -419,42 +452,35 @@ nav a:hover {
     color: var(--dark);
 }
 
+.book .button{
+    margin-top: 20px;
+}
+
 
 /************* RESPONSIVE   ***************/
 /* mobile */
 @media (max-width: 600px) {
-    .card {
-        min-width: 320px;
-        margin-bottom: 2%;
+    .form-container form {
+        padding:10px 20px;
+        width: 100%;
+    } 
+
+    .card{
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .book-card {
-        padding-left: 30%;
+        padding-left: 45%;
     }
 
     .book-card::before {
-        width: 30%;
+        width: 40%;
     }
 
     .form-container {
         background-image: none;
-        padding: 2%;
-    }
-
-    .form-container form {
-        flex-direction: column;
-        align-content: center;
-        width: 100%;
-    }
-
-    .form-container .button{
-        align-self: center;
-        margin-left: 0;
-        margin-top:20px;
-    }
-
-    .form-container form input {
-        margin-bottom: 2%;
+        padding: 20px;
     }
 
     .contact section {
@@ -468,21 +494,46 @@ nav a:hover {
 }
 
 @media (max-width: 710px) {
+    h1, .intro h1{
+        font-size: 36px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    .intro{
+        background-image: none;
+    }
     .book {
-        margin: 0;
-        width: 100vw;
+        flex-direction: column;
         justify-content: center;
-        align-content: space-evenly;
+        align-items: center;
+        padding:20px;
 
     }
 
-    .book div {
-        margin: 0;
+    .book-card{
+        padding-left: 45%;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .book-card::before {
+        width: 40%;
+    }
+
+    .book > div {
+        width:100%;
+        max-width: none;
     }
 
     .book div:first-child {
         border: none;
-        padding-top: 41vh;
+        padding-top: 43vh;
+        width:100%;
+        max-width: none;
     }
 
     .book div:first-child::before {
